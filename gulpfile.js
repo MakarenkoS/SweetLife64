@@ -25,6 +25,14 @@ var posthtml = require('gulp-posthtml');
 
 var include = require('posthtml-include');
 
+var gulpExport = require('gulp-export')
+
+var gulpBabel = require('gulp-babel')
+
+const Sourcemaps = require('gulp-sourcemaps');
+
+var del = require('del')
+
 gulp.task('less', function(){
 
 	return gulp.src('./src/less/*.less')
@@ -62,8 +70,20 @@ gulp.task('html', function(){
 	
 });
 
+// gulp.task('clean', cb => {
+//   return Del('./dest/scripts', cb)
+// })
+
 gulp.task('js', function() {
 	return gulp.src('./src/scripts/*.js')
+  // .pipe(gulpExport({
+  //   context: './src/scripts',
+  //   exclude: /_/, 
+  //   exportType: 'default'
+  // }))
+  // .pipe(Sourcemaps.init())
+  // .pipe(gulpBabel())
+  // .pipe(Sourcemaps.write('.'))
 	.pipe(gulp.dest('./dest/scripts'))
 })
 
