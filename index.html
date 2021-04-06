@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="./scripts/wow.min.js"></script>
+  <script>new WOW().init()</script>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
@@ -34,12 +38,12 @@
 
 <body>
   <header class="main-header">
-
-    <div class="main-header__logo logo">
-      <span class="logo__text">Sweet Life 64</span>
-    </div>
     <div class="main-header__wrapper">
-      <div class="main-header__contacts contacts">
+      <div class="main-header__logo logo">
+        <h1 class="logo__text bounceInLeft wow">Sweet Life</h1>
+      </div>
+
+      <div class="main-header__contacts contacts bounceInRight wow">
         <a class="contacts__insta--link" href="https://www.instagram.com/sweet_life_64/">
           <p class="contacts__insta">
             Sweet_life_64</p>
@@ -48,40 +52,46 @@
           <p class="contacts__phone">+7(902)045-49-07</p>
         </a>
       </div>
-      <nav class="main-header__navigation navigation navigation--closed navigation--no-js">
-        <button class="navigation__button-toggle button-toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="navigation__menu-list menu-list">
-          <li class="menu-list__item"> <a href="#" class="menu-list__link"> О нас </a></li>
-          <li class="menu-list__item"> <a href="#" class="menu-list__link"> Наши товары </a> </li>
-          <li class="menu-list__item"> <a href="#" class="menu-list__link"> Статьи</a> </li>
-          <li class="menu-list__item"> <a href="#" class="menu-list__link"> Контакты </a> </li>
-        </ul>
-      </nav>
     </div>
+    <nav class="main-header__navigation navigation navigation--closed navigation--no-js  ">
+      <button class="navigation__button-toggle button-toggle">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="navigation__menu-list menu-list">
+        <li class="menu-list__item"> <a href="#" class="menu-list__link"> О нас </a></li>
+        <li class="menu-list__item"> <a href="#" class="menu-list__link"> Наши товары </a> </li>
+        <li class="menu-list__item"> <a href="#" class="menu-list__link"> Статьи</a> </li>
+        <li class="menu-list__item"> <a href="#" class="menu-list__link"> Контакты </a> </li>
+      </ul>
+    </nav>
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden">Продажа меда в городе Саратов</h1>
 
     <section class="offer">
-      <h2 class="offer__caption">Мёд в Саратове</h2>
-      <a class="offer__button button" href="#goods">Наши товары</a>
+      <h2 class="offer__caption wow fadeIn">Мёд в Саратове</h2>
+      <a class="offer__button button" href="#goods">Показать</a>
     </section>
 
     <section class="goods">
+      <div class="goods__title bounceInLeft wow">
+          <img class="goods__title-image" src="img/ornament.svg" width="200" height="10">
+          <p class="goods__title-text"> Наши товары </p>
+      </div>
+      
       <div class="goods__wrapper">
         <h2 class="goods__caption visually-hidden" id="goods">Наши товары</h2>
         <ul class="goods__list">
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Мёд</p>
-              </div>            
+              </div>
               <picture>
                 <source media="(min-width: 1170px)" srcset="./img/honey_bee__desktop.jpg">
                 <img class="ticker__image" src="./img/honey_bee__mobile.jpg" width="100" height="120" alt="Мёд">
+            
               </picture>
 
               <p class="ticker__offer">Энергия и здоровье в одной ложечке</p>
@@ -98,8 +108,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Прополис</p>
               </div>
@@ -119,8 +129,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Пыльца</p>
               </div>
@@ -140,8 +150,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -151,7 +161,7 @@
               </picture>
               <p class="ticker__offer ticker__offer--big">Клубничный</p>
             </div>
-            <div class="card__info info info--no-close">
+            <div class="card__info info info--no-close ">
               <p class="info__text">
                 Ягодно-медовый микс,
                 имеет очень нежную тАящую во рту
@@ -162,8 +172,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -182,8 +192,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker ">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -202,9 +212,8 @@
               <p class="info__price">Цена <span class="info__price--value">70</span> руб/100 гр.</p>
             </div>
           </li>
-
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -223,8 +232,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -243,8 +252,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -263,8 +272,8 @@
             </div>
           </li>
 
-          <li class="goods__item card">
-            <div class="card__ticker ticker">
+          <li class="goods__item item fadeInDown wow">
+            <div class="item__ticker ticker">
               <div class="ticker__button">
                 <p class="ticker__name">Крем-мёд</p>
               </div>
@@ -321,7 +330,12 @@
 
     </footer>
   </main>
-<script src="./scripts/main.js"></script>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/materialize.min.js"></script>
+  <!-- <script src="./scripts/main.js"></script> -->
+  
+  
+ 
 </body>
 
 </html>
